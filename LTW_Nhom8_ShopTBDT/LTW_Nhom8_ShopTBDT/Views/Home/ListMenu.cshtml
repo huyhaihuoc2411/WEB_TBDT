@@ -1,0 +1,20 @@
+﻿@model IEnumerable<LTW_Nhom8_ShopTBDT.Models.CHUDE>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<body>
+    <ul class="menu1">
+        @foreach (var item in Model)
+        {
+            <li><a href="/Home/ThietBiTheoCD?MACD=@item.MACD">@Html.DisplayFor(modelItem => item.TENCD)</a></li>
+        }
+    </ul>
+</body>
+</html>
+
+

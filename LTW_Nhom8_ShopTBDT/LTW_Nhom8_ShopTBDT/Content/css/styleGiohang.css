@@ -1,0 +1,277 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.tool{
+    width: 100%;
+    height: 67px;
+    background-color: #222222;
+}
+
+.tool img{
+    width: 200px;
+    float: left;
+    padding: 3px;
+}
+
+.tool .tool-menu{
+    float: left;
+    padding: 22px;
+}
+
+.menu{
+    font-size: 18px;
+    display: flex;
+    color: dimgray;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu li a{
+    color: dimgray;
+    display: block;
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+.menu li a:hover{
+    color: #fff;
+}
+
+.menu ul.menu1{
+    position: absolute;
+    background-color: #222222;
+    padding: 15px 0px;
+    list-style: none;
+    width: 160px;
+    display: none;
+    left: 20px;
+}
+
+.menu li:hover ul.menu1{
+    display: block;
+}
+
+.menu ul.menu1 a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #333;
+    left: 0;
+}
+
+.menu ul.menu1 li:hover a{
+    border-top: 1px solid #6e6e6e;
+    color: #fff;
+}
+
+.menu ul.menu1 li:last-child a{
+    border: none;
+}
+
+.tool .cart{
+    float: right;
+    padding: 22px;
+    display: flex;
+}
+
+.tool .cart div{
+    margin: 0 15px;
+}
+
+.tool .cart div a{
+    text-decoration: none;
+    font-size: 18px;
+    color: dimgray;
+}
+
+.tool .cart div a:hover{
+    color: #fff;
+}
+
+.tool .cart div a i:hover{
+    color: #fff;
+}
+
+/*=============================*/
+
+.ndgiohang{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ndgiohang h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.showcart{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.showcart table{
+    width: 1200px;
+}
+
+.showcart table tr td, .showcart table tr th{
+    text-align: center;
+}
+
+.showcart table tr td img{
+    width: 100px;
+    margin: 10px 0px;
+}
+
+.infonhanhang{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.infonhanhang table{
+    width: 1000px;
+}
+
+.infonhanhang table tr #title{
+    width: 150px;
+    padding-left: 10px;
+}
+
+.infonhanhang table tr td{
+    height: 40px;
+    padding: 0 5px;
+}
+
+.infonhanhang table tr td input{
+    width: 100%;
+    height: 85%;
+    border-color: #CCCCCC;
+    outline: none;
+    border-radius: 8px;
+    padding: 0 5px;
+    margin-top: 3px;
+}
+
+.dathang{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.dathang button{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+    color: #fff;
+}
+
+.dathang button:hover{
+    background-color: #C50023
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+}
+
+.order a{
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*=============================*/
+
+footer{
+    width: 100%;
+    padding: 7px;
+}
+
+.tencty{
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+.tencty p{
+    font-size: 18px;
+}
+
+.tencty p i{
+    font-size: 15px;
+    color: red;
+}
+
+.tencty table{
+    margin-left: 100px;
+}
+
+.tencty table tr td{
+    text-align: left;
+    width: 150px;
+}
+
+.address{
+    width: 33%;
+    float: left;
+    padding: 10px;;
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+}
+
+.address a{
+    text-decoration: none;
+}
+
+.bi-tiktok, .bi-facebook, .bi-youtube, .bi-twitter{
+    font-size: 40px;
+}
+
+.fanpage{
+    margin-top: 15px;
+}
+
+.icon {
+    margin-top: 10px;
+}
+
+.icon i{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.bi-tiktok{
+    color: black;
+}
+
+.bi-facebook{
+    color: blue;
+}
+
+.bi-youtube{
+    color: red;
+}
+
+.fanpage img{
+    margin-top: 40px;;
+    margin-left: 95px;
+    width: 300px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

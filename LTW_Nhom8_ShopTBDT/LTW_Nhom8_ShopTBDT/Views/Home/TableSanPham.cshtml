@@ -1,0 +1,30 @@
+﻿@model  LTW_Nhom8_ShopTBDT.Models.LINHKIEN
+@{
+    ViewBag.Title = "TableSanPham";
+    Layout = "~/Views/Shared/_Layout_sanpham.cshtml";
+}
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="~/Content/img/@Model.ANHLK" alt="..." /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">@Model.TENLK</h1>
+                <div class="fs-5 mb-5">
+                    <span style="color:red;">@Model.GIABAN ₫</span>
+                </div> 
+                <p class="lead">@Model.MOTA</p>
+                <div class="d-flex">
+                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                    @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = Model.MALK, @strURL = Request.Url.ToString() }))
+                    {
+                        <input type="submit" value="Mua hàng" id="bgnGioHang" />
+ 
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

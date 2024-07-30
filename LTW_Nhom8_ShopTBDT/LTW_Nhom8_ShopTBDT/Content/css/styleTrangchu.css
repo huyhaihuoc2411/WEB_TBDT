@@ -1,0 +1,394 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*==========================*/
+.quangcao1{
+    position: absolute;
+    left: 0px;
+    top: 200px;
+}
+.quangcao1 img{
+    width: 280px;
+    height: 350px;
+}
+.quangcao2{
+    position: absolute;
+    right: 0px;
+    top: 200px;
+}
+.quangcao2 img{
+    width: 280px;
+    height: 350px;
+}
+
+/*==========================*/
+.tool{
+    width: 100%;
+    height: 67px;
+    background-color: #222222;
+}
+
+.tool img{
+    width: 200px;
+    float: left;
+    padding: 3px;
+}
+
+.tool .tool-menu{
+    float: left;
+    padding: 22px;
+}
+
+.menu{
+    font-size: 18px;
+    display: flex;
+    color: dimgray;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu li a{
+    color: dimgray;
+    display: block;
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+.menu li a:hover{
+    color: #fff;
+}
+
+.menu ul.menu1{
+    position: absolute;
+    background-color: #222222;
+    padding: 15px 0px;
+    list-style: none;
+    width: 160px;
+    display: none;
+    left: 20px;
+}
+
+.menu li:hover ul.menu1{
+    display: block;
+}
+
+.menu ul.menu1 a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #333;
+    left: 0;
+}
+
+.menu ul.menu1 li:hover a{
+    border-top: 1px solid #6e6e6e;
+    color: #fff;
+}
+
+.menu ul.menu1 li:last-child a{
+    border: none;
+}
+
+.tool .cart{
+    float: right;
+    padding: 22px;
+    display: flex;
+}
+
+.tool .cart div{
+    margin: 0 15px;
+}
+
+.tool .cart div a{
+    text-decoration: none;
+    font-size: 18px;
+    color: dimgray;
+}
+
+.tool .cart div a:hover{
+    color: #fff;
+}
+
+.tool .cart div a i:hover{
+    color: #fff;
+}
+
+.giohang{
+    position: fixed;
+    right: 10px;
+    top: 80px;
+}
+
+/*=============================*/
+
+#showcart{
+    position: fixed;
+    right: 2px;
+    top: 110px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* #showcart table tr th{
+    text-align: center;
+    padding: 0 10px;
+}
+
+#showcart table tr td{
+    text-align: center;
+}
+
+#showcart table tr td img{
+    width: 100px;
+} */
+
+.table-bordered{
+    text-align: center ;
+}
+
+.table-bordered #mycart tr td img{
+    width: 40px;
+}
+
+#showcart a{
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+}
+
+#showcart a i{
+    text-decoration: none;
+    color: black;
+}
+
+#showcart a:hover{
+    color: #3333CC;
+}
+
+#deleteall{
+    float: right;
+}
+
+#showcart button{
+    background: #FF6600;
+    color: #fff;
+    margin: 5px;
+    border: none;
+    outline: none;
+}
+
+#showcart button:hover{
+    color: black
+}
+
+/*=============================*/
+
+.content{
+    clear: both;
+    width: 100%;
+    background-color: #CDC5BF;
+    text-align: center;
+}
+
+.content img{
+    width: 1350px;
+    padding: 10px;
+}
+
+.content .images img{
+    width: 430px;
+    height: 250px;
+    margin-left: 5px;
+}
+
+.content h1{
+    margin-top: 10px;
+    color: #CC0033;
+}
+
+.content h5{
+    text-align: right;
+}
+
+.all{
+    width: 94%;;
+    text-align: right;
+    font-size: 18px;
+}
+
+.all a{
+    text-decoration: none;
+}
+
+/*=============================*/
+
+.content-sanpham{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.content-sanpham .sanpham{
+    width: 250px;
+    background: #fff;
+    text-align: center;
+    margin-left: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
+    height: 410px;
+    border-radius: 7px;
+    padding-top: 5px;
+}
+
+.content-sanpham .sanpham img{
+    width: 100%;
+    height: auto;
+}
+
+.content-sanpham .sanpham h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.content-sanpham .sanpham span, .content-sanpham .sanpham u{
+    font-size: 25px;
+    color: red;
+    font-weight: 600;
+}
+
+.content-sanpham .sanpham del,.content-sanpham .sanpham del u{
+    color: #BBBBBB;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.content-sanpham .sanpham .sl input{
+    width: 30px;
+    text-align: center;
+}
+
+/* .content-sanpham .sanpham button{
+    width: 180px;
+    background-color: #444444;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.content-sanpham .sanpham button:hover{
+    background-color: #3333CC;
+} */
+
+.btn-outline-secondary{
+    margin: 10px;
+    width: 160px;
+    color: #222222;
+    border-color: #EEEEEE;
+}
+
+/*=============================*/
+
+footer{
+    width: 100%;
+    padding: 7px;
+}
+
+.tencty{
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+.tencty p{
+    font-size: 18px;
+}
+
+.tencty p i{
+    font-size: 15px;
+    color: red;
+}
+
+.tencty table{
+    margin-left: 100px;
+}
+
+.tencty table tr td{
+    text-align: left;
+    width: 150px;
+}
+
+.address{
+    width: 33%;
+    float: left;
+    padding: 10px;;
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+}
+
+.address a{
+    text-decoration: none;
+}
+
+.bi-tiktok, .bi-facebook, .bi-youtube, .bi-twitter{
+    font-size: 40px;
+}
+
+.fanpage{
+    margin-top: 15px;
+}
+
+.icon {
+    margin-top: 10px;
+}
+
+.icon i{
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.bi-tiktok{
+    color: black;
+}
+
+.bi-facebook{
+    color: blue;
+}
+
+.bi-youtube{
+    color: red;
+}
+
+.fanpage img{
+    margin-top: 40px;;
+    margin-left: 95px;
+    width: 300px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.form-horizontal .form-group{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.form-horizontal .form-group a{
+    text-decoration:none;
+}
+

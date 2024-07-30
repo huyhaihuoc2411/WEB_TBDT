@@ -1,0 +1,27 @@
+﻿@using LTW_Nhom8_ShopTBDT.Models
+@model List<LINHKIEN>
+
+@{
+    ViewBag.Title = "ThietBiTheoCD";
+    Layout = "~/Views/Shared/_Layout_sanpham.cshtml";
+}
+@ViewBag.LINHKIEN
+
+<div class="container" style="margin-left: 150px; margin-right: 150px; margin-bottom: 15px;">
+    @foreach (var item in Model)
+    {
+        <div style="float: left; margin-left: 25px; margin-top: 30px; height: 370px; text-align: center; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+            <img style="width: 260px; margin-bottom: 10px;" src="@Url.Content("~/Content/img/" + item.ANHLK)" width="70%" height="=70%" alt="Image" />
+            <h6 style="color:red;">@String.Format("{0:0,0}", item.GIABAN) VNĐ</h6>
+            @if (item.TENLK.Length > 30)
+            {
+                <p><strong title="@item.TENLK">@item.TENLK.Substring(0, 15)...</strong><br /><a href="@Url.Action("TableSanPham", "Home", new { @mlk = item.MALK })">Xem chi tiết</a></p>
+            }
+            else
+            {
+                <p><strong title="@item.TENLK">@item.TENLK</strong><br /><a href="@Url.Action("TableSanPham", "Home", new { @mlk = item.MALK })">Xem chi tiết</a></p>
+            }
+
+        </div>
+    }
+</div>

@@ -1,0 +1,20 @@
+﻿@model LTW_Nhom8_ShopTBDT.Models.NGUOIDUNG
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var u = Session["use"] as LTW_Nhom8_ShopTBDT.Models.NGUOIDUNG;
+}
+
+@{
+    if (u != null)
+    {
+
+        <h2>Xin chào : @u.HoTen</h2>
+        @Html.ActionLink("Đăng xuất", "DangXuat", "User")
+    }
+    <div>
+        Huy
+    </div>
+
+}
+

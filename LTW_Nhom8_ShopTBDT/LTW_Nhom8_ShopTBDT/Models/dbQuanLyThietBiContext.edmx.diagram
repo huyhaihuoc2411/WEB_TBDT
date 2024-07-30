@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41d507232b6a495dbfc2561cd26830b1" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_TBDTModel.CHITIETHD" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.CHUDE" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.CONGTY" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.HOADON" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.KHO" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.KHUYENMAI" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.LINHKIEN" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.NGUOIDUNG" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.PHIEUXUAT" Width="1.5" PointX="10" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.sysdiagram" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_TBDTModel.USERGROUP" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="QL_TBDTModel.FK_CHITIETHD_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_CHITIETHD_LINHKIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_LINHKIEN_CHUDE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_HOADON_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_KHUYENMAI_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_PHIEUXUAT_KHO" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_TBDTModel.FK_NGUOIDUNG_USERGROUP" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

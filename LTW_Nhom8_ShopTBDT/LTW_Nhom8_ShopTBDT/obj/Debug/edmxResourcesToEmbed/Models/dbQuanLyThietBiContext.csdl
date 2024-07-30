@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_TBDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CHITIETHD">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MALK" />
+    </Key>
+    <Property Name="MAHD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MALK" Type="Int32" Nullable="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="THANHTIEN" Type="Int32" />
+    <NavigationProperty Name="HOADON" Relationship="Self.FK_CHITIETHD_HOADON" FromRole="CHITIETHD" ToRole="HOADON" />
+    <NavigationProperty Name="LINHKIEN" Relationship="Self.FK_CHITIETHD_LINHKIEN" FromRole="CHITIETHD" ToRole="LINHKIEN" />
+  </EntityType>
+  <EntityType Name="CHUDE">
+    <Key>
+      <PropertyRef Name="MACD" />
+    </Key>
+    <Property Name="MACD" Type="Int32" Nullable="false" />
+    <Property Name="TENCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LINHKIENs" Relationship="Self.FK_LINHKIEN_CHUDE" FromRole="CHUDE" ToRole="LINHKIEN" />
+  </EntityType>
+  <EntityType Name="CONGTY">
+    <Key>
+      <PropertyRef Name="IDCTY" />
+    </Key>
+    <Property Name="IDCTY" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TENCTY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NGAYDAT" Type="DateTime" Precision="0" />
+    <Property Name="TRANGTHAI" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="CHITIETHDs" Relationship="Self.FK_CHITIETHD_HOADON" FromRole="HOADON" ToRole="CHITIETHD" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="HOADON" ToRole="KHACHHANG" />
+    <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK_KHUYENMAI_HOADON" FromRole="HOADON" ToRole="KHUYENMAI" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TENKH" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="GIOITINH" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="Int32" />
+    <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_KHACHHANG" FromRole="KHACHHANG" ToRole="HOADON" />
+  </EntityType>
+  <EntityType Name="KHO">
+    <Key>
+      <PropertyRef Name="MAKHO" />
+    </Key>
+    <Property Name="MAKHO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TENKHO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PHIEUXUATs" Relationship="Self.FK_PHIEUXUAT_KHO" FromRole="KHO" ToRole="PHIEUXUAT" />
+  </EntityType>
+  <EntityType Name="KHUYENMAI">
+    <Key>
+      <PropertyRef Name="MAKM" />
+    </Key>
+    <Property Name="MAKM" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MUCKM" Type="Int32" />
+    <Property Name="MAHD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="HOADON" Relationship="Self.FK_KHUYENMAI_HOADON" FromRole="KHUYENMAI" ToRole="HOADON" />
+  </EntityType>
+  <EntityType Name="LINHKIEN">
+    <Key>
+      <PropertyRef Name="MALK" />
+    </Key>
+    <Property Name="MALK" Type="Int32" Nullable="false" />
+    <Property Name="TENLK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GIABAN" Type="Int32" />
+    <Property Name="MOTA" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ANHLK" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="MACD" Type="Int32" />
+    <NavigationProperty Name="CHITIETHDs" Relationship="Self.FK_CHITIETHD_LINHKIEN" FromRole="LINHKIEN" ToRole="CHITIETHD" />
+    <NavigationProperty Name="CHUDE" Relationship="Self.FK_LINHKIEN_CHUDE" FromRole="LINHKIEN" ToRole="CHUDE" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Matkhau" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+    <Property Name="Groupid" Type="Int32" />
+    <Property Name="HoTen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="USERGROUP" Relationship="Self.FK_NGUOIDUNG_USERGROUP" FromRole="NGUOIDUNG" ToRole="USERGROUP" />
+  </EntityType>
+  <EntityType Name="PHIEUXUAT">
+    <Key>
+      <PropertyRef Name="MAPX" />
+    </Key>
+    <Property Name="MAPX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TENPX" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MAKHO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="KHO" Relationship="Self.FK_PHIEUXUAT_KHO" FromRole="PHIEUXUAT" ToRole="KHO" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="USERGROUP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Ten" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="NGUOIDUNGs" Relationship="Self.FK_NGUOIDUNG_USERGROUP" FromRole="USERGROUP" ToRole="NGUOIDUNG" />
+  </EntityType>
+  <Association Name="FK_CHITIETHD_HOADON">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+    <End Role="CHITIETHD" Type="Self.CHITIETHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CHITIETHD">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETHD_LINHKIEN">
+    <End Role="LINHKIEN" Type="Self.LINHKIEN" Multiplicity="1" />
+    <End Role="CHITIETHD" Type="Self.CHITIETHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LINHKIEN">
+        <PropertyRef Name="MALK" />
+      </Principal>
+      <Dependent Role="CHITIETHD">
+        <PropertyRef Name="MALK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LINHKIEN_CHUDE">
+    <End Role="CHUDE" Type="Self.CHUDE" Multiplicity="0..1" />
+    <End Role="LINHKIEN" Type="Self.LINHKIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHUDE">
+        <PropertyRef Name="MACD" />
+      </Principal>
+      <Dependent Role="LINHKIEN">
+        <PropertyRef Name="MACD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHUYENMAI_HOADON">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="0..1" />
+    <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="KHUYENMAI">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHIEUXUAT_KHO">
+    <End Role="KHO" Type="Self.KHO" Multiplicity="0..1" />
+    <End Role="PHIEUXUAT" Type="Self.PHIEUXUAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHO">
+        <PropertyRef Name="MAKHO" />
+      </Principal>
+      <Dependent Role="PHIEUXUAT">
+        <PropertyRef Name="MAKHO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NGUOIDUNG_USERGROUP">
+    <End Role="USERGROUP" Type="Self.USERGROUP" Multiplicity="0..1" />
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USERGROUP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NGUOIDUNG">
+        <PropertyRef Name="Groupid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbQuanLyThietBiContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHITIETHDs" EntityType="Self.CHITIETHD" />
+    <EntitySet Name="CHUDEs" EntityType="Self.CHUDE" />
+    <EntitySet Name="CONGTies" EntityType="Self.CONGTY" />
+    <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="KHOes" EntityType="Self.KHO" />
+    <EntitySet Name="KHUYENMAIs" EntityType="Self.KHUYENMAI" />
+    <EntitySet Name="LINHKIENs" EntityType="Self.LINHKIEN" />
+    <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
+    <EntitySet Name="PHIEUXUATs" EntityType="Self.PHIEUXUAT" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="USERGROUPs" EntityType="Self.USERGROUP" />
+    <AssociationSet Name="FK_CHITIETHD_HOADON" Association="Self.FK_CHITIETHD_HOADON">
+      <End Role="HOADON" EntitySet="HOADONs" />
+      <End Role="CHITIETHD" EntitySet="CHITIETHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHD_LINHKIEN" Association="Self.FK_CHITIETHD_LINHKIEN">
+      <End Role="LINHKIEN" EntitySet="LINHKIENs" />
+      <End Role="CHITIETHD" EntitySet="CHITIETHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LINHKIEN_CHUDE" Association="Self.FK_LINHKIEN_CHUDE">
+      <End Role="CHUDE" EntitySet="CHUDEs" />
+      <End Role="LINHKIEN" EntitySet="LINHKIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_KHACHHANG" Association="Self.FK_HOADON_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="HOADON" EntitySet="HOADONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHUYENMAI_HOADON" Association="Self.FK_KHUYENMAI_HOADON">
+      <End Role="HOADON" EntitySet="HOADONs" />
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHIEUXUAT_KHO" Association="Self.FK_PHIEUXUAT_KHO">
+      <End Role="KHO" EntitySet="KHOes" />
+      <End Role="PHIEUXUAT" EntitySet="PHIEUXUATs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NGUOIDUNG_USERGROUP" Association="Self.FK_NGUOIDUNG_USERGROUP">
+      <End Role="USERGROUP" EntitySet="USERGROUPs" />
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
